@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collapsible</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="alert alert-info small">
+      <i class="fa fa-comment"></i>&nbsp;&nbsp;Drag &amp; Drop fields from the left (Available Fields) over to the right side in the desired location on your dashboard.
+    </div>
+    <span name="el_validationErrorFields"></span>
+    <br />
+    <div class="row dragSortableItems">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header"><i class="fa fa-folder-open"></i>&nbsp;&nbsp;Available Fields</div>
+          <div class="card-body well">
+            <ul id="in_available_fields" name="in_available_fields" class="custom-scrollbar in_available_fields sortable-list fixed-panel ui-sortable">
+              <li class="sortable-item allowSecondary allowExport d-flex justify-content-between align-items-center" data-fid="3">
+                <span>
+                  <i class="fa-solid fa-grip-lines"></i>&nbsp;Tool Description
+                </span>
+                <button class="edit-btn"><i class="fa-regular fa-pen-to-square"></i></button>
+              </li>
+              <li class="sortable-item allowPrimary allowSecondary allowExport" data-fid="4"><i class="fa-solid fa-grip-lines"></i>&nbsp;&nbsp;Tool Type</li>
+              <li class="sortable-item allowPrimary allowSecondary allowExport" data-fid="5"><i class="fa-solid fa-grip-lines"></i>&nbsp;&nbsp;Tool Suite</li>
+              <li class="sortable-item allowPrimary allowSecondary allowExport" data-fid="6"><i class="fa-solid fa-grip-lines"></i>&nbsp;&nbsp;Tool Portfolio</li>
+              <li class="sortable-item allowPrimary allowSecondary allowExport" data-fid="7"><i class="fa-solid fa-grip-lines"></i>&nbsp;&nbsp;Tool Status</li>
+              <li class="sortable-item allowPrimary allowSecondary allowExport" data-fid="8"><i class="fa-solid fa-grip-lines"></i>&nbsp;&nbsp;Tool Owner QID</li>
+              <li class="sortable-item allowPrimary allowSecondary allowExport" data-fid="9"><i class="fa-solid fa-grip-lines"></i>&nbsp;&nbsp;Tool Owner NTID</li>
+              <li class="sortable-item allowPrimary allowSecondary allowExport" data-fid="10"><i class="fa-solid fa-grip-lines"></i>&nbsp;&nbsp;Tool Owner Email</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card primaryPanel">
+          <div class="card-header"><i class="fa fa-star"></i>&nbsp;&nbsp;Auto/Flex</div>
+          <div class="card-body well">
+            <div class="">
+              <center></center>
+            </div>
+            <ul name="in_primary_fields" class="sortable-list primaryDropzone fixed-panel"></ul>
+          </div>
+        </div>
+        <br />
+        <div class="card secondaryPanel">
+          <div class="card-header"><i class="fa fa-star"></i>&nbsp;&nbsp;High</div>
+          <div class="card-body well">
+            <div class="">
+              <center></center>
+            </div>
+            <ul name="in_secondary_fields" class="sortable-list secondaryDropzone fixed-panel" data-fieldtype="secondary"></ul>
+          </div>
+        </div>
+        <br />
+        <div class="card exportPanel">
+          <div class="card-header"><i class="fa fa-download"></i>&nbsp;&nbsp;Medium</div>
+          <div class="card-body well">
+            <div class="">
+              <center></center>
+            </div>
+            <ul name="in_export_fields" class="sortable-list exportDropzone fixed-panel"></ul>
+          </div>
+        </div>
+        <br />
+        <div class="card exportPanel">
+          <div class="card-header"><i class="fa fa-download"></i>&nbsp;&nbsp;Medium</div>
+          <div class="card-body well">
+            <div class="">
+              <center></center>
+            </div>
+            <ul name="in_export_fields" class="sortable-list exportDropzone fixed-panel"></ul>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0."></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
